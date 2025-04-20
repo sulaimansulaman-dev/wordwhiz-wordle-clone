@@ -1,0 +1,74 @@
+1. Start the Wordle Game
+
+2. Define a struct GameInfo:
+   - secretWord (string)
+   - attemptsLeft (integer)
+
+3. Define a template class WordList:
+   - Template Type T
+   - Template Parameter N (maximum number of words)
+
+4. Create a WordList object to load words from "wordlist.txt":
+   - Initialize with the template type as string and N as 1000 (maximum words)
+   - Load words from the file into an array
+
+5. Seed the random number generator with the current time
+
+6. Generate a random secretWord by:
+   - Selecting a random word from the loaded word list
+
+7. Initialize attemptsLeft to 6
+
+8. Define three self-defined functions:
+   - Function 1: Check if a guess is correct (IsCorrectGuess)
+   - Function 2: Calculate and display a hint (DisplayHint)
+   - Function 3: Load words from a file into an array (LoadWords)
+
+9. Display a welcome message using formatted output:
+   - "Welcome to Wordle! You have 6 attempts to guess the secret word."
+
+10. Start the game loop:
+    - Repeat while attemptsLeft is greater than 0
+
+    11. Display the attempt number using formatted output:
+        - "Attempt #: " followed by (7 - attemptsLeft)
+
+    12. Get a guess from the player through input:
+        - Read a string from the player's input
+
+    13. Check if the guess length is not equal to the secretWord length using conditional statements:
+        - If not equal:
+            - Display an error message using formatted output: "Invalid guess length. Please guess a [length]-letter word."
+            - Continue to the next iteration of the loop
+
+    14. Check if the guess is correct using the IsCorrectGuess function:
+        - If the guess matches the secretWord:
+            - Display a congratulatory message with the secretWord using formatted output
+            - Exit the game loop
+
+    15. Calculate and display a hint using the DisplayHint function:
+        - For each character in the guess:
+            - If the character is correct in both position and letter:
+                - Append the character to the hint
+            - Else, if the character is in the secretWord but in the wrong position:
+                - Append "+" to the hint
+            - Else, the character is not in the secretWord:
+                - Append "-" to the hint
+        - Display the hint using formatted output
+
+    16. Decrement attemptsLeft by 1
+
+11. End the game loop
+
+12. Check if attemptsLeft reached 0 using conditional statements:
+    - If yes:
+        - Display a game over message with the secretWord using formatted output
+    - If no:
+        - The player won, display a winning message with the secretWord using formatted output
+
+13. End the Wordle Game
+
+
+
+
+
